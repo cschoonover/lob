@@ -20,7 +20,7 @@ var Player = mongoose.model('Player',playerSchema);
 
 console.log("find players");
 
-Player.find(function (err, players) {
+Player.count({name:/Justin/i},function (err, players) {
   if (err) return console.error(err);
   console.log(players);
 });
